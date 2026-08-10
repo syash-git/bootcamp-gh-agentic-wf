@@ -41,6 +41,18 @@
               <span aria-hidden="true">&#8594;</span>
             </button>
           </li>
+          <li>
+            <button
+              class="daily-update-trigger"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="august-10-dialog"
+              data-dialog-trigger
+            >
+              <span>10th of August</span>
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -176,6 +188,34 @@
           Actions for tasks where exact reproducibility doesn&rsquo;t matter, such as triaging
           issues, drafting documentation, researching dependencies, or proposing code
           improvements for human review.
+        </p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="daily-update-dialog"
+      id="august-10-dialog"
+      aria-labelledby="august-10-question"
+      aria-describedby="august-10-answer"
+    >
+      <article class="daily-update-dialog-content">
+        <header class="daily-update-dialog-header">
+          <p>Daily Update / 10th of August</p>
+          <form method="dialog">
+            <button class="dialog-close" type="submit" aria-label="Close dialog" title="Close dialog">
+              <span aria-hidden="true">&#10005;</span>
+            </button>
+          </form>
+        </header>
+        <h2 id="august-10-question">Which AI engine should I use?</h2>
+        <p id="august-10-answer">
+          Start with <strong>GitHub Copilot</strong> if you already have a Copilot
+          subscription &mdash; it requires no extra account and is the default engine.
+          Use <strong>Claude</strong> if you want fine-grained turn control for long
+          reasoning sessions or prefer Anthropic models. Use <strong>Codex</strong> or
+          <strong>Gemini</strong> if those models are already part of your existing
+          tooling or budget decisions. You can switch engines at any time by changing
+          the engine setting in frontmatter and updating the corresponding secret.
         </p>
       </article>
     </dialog>
