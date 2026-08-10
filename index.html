@@ -41,6 +41,18 @@
               <span aria-hidden="true">&#8594;</span>
             </button>
           </li>
+          <li>
+            <button
+              class="daily-update-trigger"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="august-10-dialog"
+              data-dialog-trigger
+            >
+              <span>10th of August</span>
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -176,6 +188,34 @@
           Actions for tasks where exact reproducibility doesn&rsquo;t matter, such as triaging
           issues, drafting documentation, researching dependencies, or proposing code
           improvements for human review.
+        </p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="daily-update-dialog"
+      id="august-10-dialog"
+      aria-labelledby="august-10-question"
+      aria-describedby="august-10-answer"
+    >
+      <article class="daily-update-dialog-content">
+        <header class="daily-update-dialog-header">
+          <p>Daily Update / 10th of August</p>
+          <form method="dialog">
+            <button class="dialog-close" type="submit" aria-label="Close dialog" title="Close dialog">
+              <span aria-hidden="true">&#10005;</span>
+            </button>
+          </form>
+        </header>
+        <h2 id="august-10-question">What is a workflow lock file?</h2>
+        <p id="august-10-answer">
+          The <code>.lock.yml</code> file is the compiled GitHub Actions workflow generated
+          from your <code>.md</code> file by <code>gh aw compile</code>. It contains
+          SHA-pinned actions, resolved imports, permissions, and all guardrail hardening,
+          so you can inspect it to see exactly what will run. Commit both files: the
+          <code>.md</code> source (edit the prompt body freely without recompiling) and the
+          <code>.lock.yml</code> file (what GitHub Actions actually runs; regenerate it
+          after any frontmatter change).
         </p>
       </article>
     </dialog>
